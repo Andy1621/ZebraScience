@@ -8,6 +8,7 @@ const fs = require('fs');
 fs.open('./src/config/env.js', 'w', function (err, fd) {
     const buf = 'export default "development";';
     fs.write(fd, buf, function(err, written, buffer) {});
+});
 
 module.exports = merge(webpackBaseConfig, {
     devtool: '#source-map',
